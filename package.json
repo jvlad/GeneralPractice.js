@@ -1,0 +1,11 @@
+{
+  "name": "general-practice.js",
+  "version": "1.0.0",
+  "description": "Various problems solved in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Vlad Zamskoi",
+  "license": "MIT"
+}
