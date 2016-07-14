@@ -37,18 +37,15 @@ log = [
 discoverSiteMap = function(log) {
     var count = 0
     var siteMap = {}
-    var pagesVisitedBy = {}
+    var lastPageVisitedBy = {}
     for (var i = 0; i < log.length; i++) {
         var currentUser = log[i].user
         var currentPage = log[i].page
-        if (!pagesVisitedBy[currentUser]) {
-            pagesVisitedBy[currentUser] = []
-            pagesVisitedBy[currentUser][0] = currentPage
+        if (!lastPageVisitedBy[currentUser]) {
+            lastPageVisitedBy[currentUser] = currentPage
         } else {
-            numberOfVisitedPages = pagesVisitedBy[currentUser].length
-            pagesVisitedBy[currentUser][numberOfVisitedPages] = currentPage
-            previousVisitedPage = pagesVisitedBy[currentUser][numberOfVisitedPages - 1]
-            addPageLink(siteMap, previousVisitedPage, currentPage)
+            addPageLink(siteMap, lastPageVisitedBy[currentUser], currentPage)
+            lastPageVisitedBy[currentUser] = currentPage
         }
     }
     return siteMap
