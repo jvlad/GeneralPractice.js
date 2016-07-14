@@ -1,1 +1,3 @@
-console.log("This is a short test case");
+var siteMap = require('./discoverSiteMap.js');
+
+console.log(siteMap.data);
