@@ -41,7 +41,7 @@ function sum(string1, string2) {
             indexWhereIncrementRequired = i + 1;
         }
 
-        if ((longerSummandDigits.length - i === 1) && (indexWhereIncrementRequired === longerSummandDigits.length)) {
+        if ((longerSummandDigits.length - i === 1) && isIncrementRequiredOnNextIndex) {
             result[i + 1] = "1";
         }
     }
