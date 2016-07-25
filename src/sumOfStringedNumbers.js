@@ -15,13 +15,13 @@ function sum(string1, string2) {
     var result = []
     var indexWhereIncrementRequired = -1
     for (var i = 0; i < longerSummandDigits.length; i++) {
-        var isBufferSetNeeded = false;
+        var isIncrementRequiredOnNextIndex = false;
         var currentIterationResultDigit;
         if (i < shorterSummandDigits.length) {
             currentIterationResultDigit = sumOneDigitNumbers(longerSummandDigits[i], shorterSummandDigits[i]);
             if (currentIterationResultDigit.length === 2) {
                 currentIterationResultDigit = currentIterationResultDigit.split("")[1];
-                isBufferSetNeeded = true;
+                isIncrementRequiredOnNextIndex = true;
             }
         } else {
             currentIterationResultDigit = longerSummandDigits[i];
@@ -32,12 +32,12 @@ function sum(string1, string2) {
         }
         if (currentIterationResultDigit.length === 2) {
             currentIterationResultDigit = currentIterationResultDigit.split("")[1];
-            isBufferSetNeeded = true;
+            isIncrementRequiredOnNextIndex = true;
         }
 
         result[i] = currentIterationResultDigit;
 
-        if (isBufferSetNeeded) {
+        if (isIncrementRequiredOnNextIndex) {
             indexWhereIncrementRequired = i + 1;
         }
 
