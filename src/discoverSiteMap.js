@@ -34,7 +34,7 @@ log = [
     { 'user': 'D', 'page': 1 },
 ]
 
-discoverSiteMap = function(log) {
+function discoverSiteMap(log) {
     var count = 0
     var siteMap = {}
     var lastPageVisitedBy = {}
@@ -51,7 +51,7 @@ discoverSiteMap = function(log) {
     return siteMap
 }
 
-addPageLink = function(siteMap, fromPage, toPage) {
+function addPageLink(siteMap, fromPage, toPage) {
     if (!siteMap[fromPage]) {
         siteMap[fromPage] = new Set()
     }

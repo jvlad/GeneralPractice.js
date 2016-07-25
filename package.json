@@ -4,7 +4,7 @@
   "description": "Various problems solved in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node src/index.js"
   },
   "author": "Vlad Zamskoi",
   "license": "MIT"
