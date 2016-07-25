@@ -1,4 +1,4 @@
-/* Find sum of two numbers represented as strings. Do not use Number(string) function in order to convert strings to numbers.
+/* Find sum of two non-negative numbers represented as strings. Do not use Number(string) function in order to convert strings to numbers.
  */
 
 function sum(string1, string2) {
