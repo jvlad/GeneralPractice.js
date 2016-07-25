@@ -1,4 +1,5 @@
-# General-practice.java
+# General-practice.js
 Various problems solved in JavaScript
 
-* [Discover Site Map](./discoverSiteMap.js)
+* [Discover Site Map](./src/discoverSiteMap.js)
+* [Sum Of Stringed Numbers](./src/sumOfStringedNumbers.js)
